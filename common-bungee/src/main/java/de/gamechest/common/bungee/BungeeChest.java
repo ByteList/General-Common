@@ -14,7 +14,7 @@ public final class BungeeChest {
 
     public static void setInstance(BungeeChestPlugin plugin) {
         if(instance != null) {
-            throw new UnsupportedOperationException("Cannot redefine singleton Chest instance");
+            throw new UnsupportedOperationException("Cannot redefine singleton BungeeChest instance");
         }
         instance = plugin;
     }

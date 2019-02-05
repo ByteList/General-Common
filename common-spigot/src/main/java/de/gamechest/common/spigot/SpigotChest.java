@@ -14,7 +14,7 @@ public final class SpigotChest {
 
     public static void setInstance(SpigotChestPlugin plugin) {
         if(instance != null) {
-            throw new UnsupportedOperationException("Cannot redefine singleton Chest instance");
+            throw new UnsupportedOperationException("Cannot redefine singleton SpigotChest instance");
         }
         instance = plugin;
     }
