@@ -1,5 +1,6 @@
 package de.gamechest.common.spigot;
 
+import de.gamechest.common.ChestPrefix;
 import lombok.Getter;
 
 /**
