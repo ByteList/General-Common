@@ -1,5 +1,7 @@
 package de.gamechest.common;
 
+import de.gamechest.common.database.ChestDatabaseManager;
+
 import java.util.UUID;
 
 /**
@@ -8,6 +10,8 @@ import java.util.UUID;
  * Copyright by ByteList - https://bytelist.de/
  */
 public interface ChestPlugin {
+
+    public ChestDatabaseManager getDatabaseManager();
 
     public String getVersion();
 

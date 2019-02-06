@@ -1,23 +1,15 @@
 package de.gamechest.common.spigot;
 
-import de.gamechest.common.ChestPrefix;
-import lombok.Getter;
+import de.gamechest.common.Chest;
 
 /**
  * Created by ByteList on 03.02.2019.
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public final class SpigotChest {
+public final class SpigotChest extends Chest {
 
-    @Getter
-    private static SpigotChestPlugin instance;
-
-    public static void setInstance(SpigotChestPlugin plugin) {
-        if(instance != null) {
-            throw new UnsupportedOperationException("Cannot redefine singleton SpigotChest instance");
-        }
-        instance = plugin;
+    public static SpigotChestPlugin getInstance() {
+        return (SpigotChestPlugin) Chest.getInstance();
     }
-
 }
