@@ -28,4 +28,6 @@ public interface ChestPlugin {
     public boolean isRankToggled(UUID uuid);
 
     public boolean isCloudEnabled();
+
+    public String getPlayername(UUID uuid);
 }
