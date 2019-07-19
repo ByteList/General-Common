@@ -17,7 +17,7 @@ import java.util.UUID;
  *
  * Copyright by ByteList - https://bytelist.de/
  */
-public class TabList {
+public abstract class SpigotChestTabList {
 
     private static HashMap<UUID, TabListMode> playerModes = new HashMap<>();
     private static HashMap<UUID, String> customPrefix = new HashMap<>();
@@ -27,11 +27,11 @@ public class TabList {
     public static void update(Player player, TabListMode tabListMode) {
         if(tabListMode.isRank()) {
             Rank rank;
-            SpigotChestNick nick = SpigotChest.getInstance().get;
-            if(nick.isNicked(player.getUniqueId()) || GameChest.getInstance().isRankToggled(player.getUniqueId())) {
+            SpigotChestNick nick = SpigotChest.getInstance().getNick();
+            if(nick.isNicked(player.getUniqueId()) || SpigotChest.getInstance().isRankToggled(player.getUniqueId())) {
                 rank = Rank.SPIELER;
             } else {
-                rank = GameChest.getInstance().getRank(player.getUniqueId());
+                rank = SpigotChest.getInstance().getRank(player.getUniqueId());
             }
             asRank(player, rank);
         } else if(tabListMode.isColor()) {
@@ -172,11 +172,11 @@ public class TabList {
             String suffix = "§r";
             if (tabListMode.isRank()) {
                 Rank rank;
-                SpigotChestNick nick = GameChest.getInstance().getNick();
-                if (nick.isNicked(player.getUniqueId()) || GameChest.getInstance().isRankToggled(player.getUniqueId())) {
+                SpigotChestNick nick = SpigotChest.getInstance().getNick();
+                if (nick.isNicked(player.getUniqueId()) || SpigotChest.getInstance().isRankToggled(player.getUniqueId())) {
                     rank = Rank.SPIELER;
                 } else {
-                    rank = GameChest.getInstance().getRank(player.getUniqueId());
+                    rank = SpigotChest.getInstance().getRank(player.getUniqueId());
                 }
                 teamName = rank.getId() + rank.getShortName();
                 prefix = rank.getPrefix();
