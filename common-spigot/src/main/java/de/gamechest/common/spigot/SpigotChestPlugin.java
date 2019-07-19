@@ -14,4 +14,6 @@ public interface SpigotChestPlugin extends ChestPlugin {
     public String getDisplayname(Player player);
 
     public void sendNoPermissionMessage(CommandSender sender);
+
+    public SpigotChestNick getNick();
 }
