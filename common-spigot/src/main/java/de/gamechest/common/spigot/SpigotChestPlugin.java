@@ -5,6 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.Metadatable;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Created by ByteList on 03.02.2019.
@@ -22,4 +23,6 @@ public interface SpigotChestPlugin extends ChestPlugin {
     public void setMetadata(Metadatable object, String key, Object value, Plugin plugin);
 
     public Object getMetadata(Metadatable object, String key, Plugin plugin);
+
+    public JavaPlugin getPlugin();
 }

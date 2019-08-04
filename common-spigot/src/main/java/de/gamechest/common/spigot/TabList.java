@@ -1,7 +1,6 @@
 package de.gamechest.common.spigot;
 
 import de.gamechest.common.Rank;
-import de.gamechest.common.spigot.SpigotChestNick;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -17,7 +16,7 @@ import java.util.UUID;
  *
  * Copyright by ByteList - https://bytelist.de/
  */
-public abstract class SpigotChestTabList {
+public class TabList {
 
     private static HashMap<UUID, TabListMode> playerModes = new HashMap<>();
     private static HashMap<UUID, String> customPrefix = new HashMap<>();

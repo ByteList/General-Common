@@ -2,6 +2,7 @@ package de.gamechest.common.bungee;
 
 import de.gamechest.common.ChestPlugin;
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.plugin.Plugin;
 
 import java.util.UUID;
 
@@ -15,4 +16,6 @@ public interface BungeeChestPlugin extends ChestPlugin {
     public String getBanMessage(UUID uuid);
 
     public void sendNoPermissionMessage(CommandSender sender);
+
+    public Plugin getPlugin();
 }
